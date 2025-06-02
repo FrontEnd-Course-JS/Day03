@@ -5,6 +5,8 @@
 // function sum(num1, num2) {
 //     console.log(num1 + num2);
 
+// const { use } = require("react");
+
 // }
 // //02- Function Expression
 // let setData = function () {
@@ -116,19 +118,92 @@
 
 //var variable is accessed every where inside the function [function scope ]
 //let&const variables are blocked scope
-function test() {
-    var x = 5;
-    if (x === 5) {
-        var a = 10;
-        let b = 15;
-        const c = 20;
-        console.log("from if block(var) a = " + a);//from if block(var) a = 10
-        console.log("from if block(let) b = " + b);//from if block(let) b = 15
-        console.log("from if block(const) c = " + c);//from if block(const) c = 20
-    }
-    console.log("===============================");
-    console.log("outside if block (var) a = " + a);//outside if block (var) a = 10
-    console.log("outside if block (let) b = " + b);
-    console.log("outside if block (const) c = " + c);
-}
-test();
+// function test() {
+//     var x = 5;
+//     if (x === 5) {
+//         var a = 10;
+//         let b = 15;
+//         const c = 20;
+//         console.log("from if block(var) a = " + a);//from if block(var) a = 10
+//         console.log("from if block(let) b = " + b);//from if block(let) b = 15
+//         console.log("from if block(const) c = " + c);//from if block(const) c = 20
+//     }
+//     console.log("===============================");
+//     console.log("outside if block (var) a = " + a);//outside if block (var) a = 10
+//     console.log("outside if block (let) b = " + b);
+//     console.log("outside if block (const) c = " + c);
+// }
+// test();
+
+//------------------------- ---------------------------------- -----------------
+// //Object
+
+// let user = {
+//     name:"Eslam",
+//     age:22,
+//     country:"Mansoura",
+//     login:(id)=>{ //Method
+//         console.log("Logged In!\nid = "+id);
+//     }
+// };
+
+// //dot notation Access
+// console.log(user.name);///Eslam
+
+// //bracket notation Access
+// console.log(user["age"]);//22
+
+// user["country"] = "alexandria";//override last value of country
+// console.log(user.country);//alexandria
+
+// //add new key to the object 
+// user.gender = "male";
+// console.log(user.gender);//male
+
+// console.log(user);//{name: 'Eslam', age: 22, country: 'alexandria', gender: 'male'}
+
+// //delete specific key from object
+// delete user.gender;
+// console.log(user);//{name: 'Eslam', age: 22, country: 'alexandria'}
+
+
+// //Access method inside object
+// let id = 5;
+// user.login(id);//Logged In!
+//                //id = 5
+
+//--------------------------------------------------------------------------------
+////Array
+// let colors = ["red", "green", "blue", "brown", 1, 5, 4, 7, 8, 5, 6, 4, 7, 8, 5, 2, 6, 8, 5, 2, 5, 2, 5, 8, 5, 9, 8, 7, 8, 5, 8, 89, 4];
+// console.log(colors);//['red', 'green', 'blue', 'brown']
+
+// console.log(colors.length);//4 [number of elements inside the array]
+
+// //Access array elements with 0-index
+// console.log(colors[0]);//red
+// console.log(colors[1]);//green
+// console.log(colors[2]);//blue
+// console.log(colors[3]);//brown
+// console.log(colors[colors.length-1]);//4 [to access last element in the array]
+
+// let colors = ["red", "green", "blue", "brown"];
+
+// //add element at the "end" of array [push] 
+// colors.push("yellow");
+// console.log(colors);//['red', 'green', 'blue', 'brown', 'yellow']
+
+// //add element at the "start" of array [unshift] 
+// colors.unshift("black");
+// console.log(colors);//['black', 'red', 'green', 'blue', 'brown', 'yellow']
+
+// //delete element from the "end" of array [pop] 
+// colors.pop();
+// console.log(colors);//['black', 'red', 'green', 'blue', 'brown']
+
+// //delete element from the "start" of array [shift] 
+// colors.shift();
+// console.log(colors);//['red', 'green', 'blue', 'brown']
+
+
+
+
